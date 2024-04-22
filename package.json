@@ -1,0 +1,26 @@
+{
+  "name": "@eblib/core",
+  "version": "1.0.0-beta",
+  "description": "A ligntweight JavaScript utility library for EBLib or use Independently.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.js --bundleConfigAsCjs",
+    "publish:private": "npm publish --registry https://i.enbrau.com:91/nexus/repository/npm-release/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/enbrau/eblib-core.git"
+  },
+  "keywords": [
+    "util"
+  ],
+  "author": "enbrau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enbrau/eblib-core/issues"
+  },
+  "homepage": "https://github.com/enbrau/eblib-core#readme",
+  "devDependencies": {
+    "rollup": "^4.16.1"
+  }
+}
