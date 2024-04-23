@@ -3,7 +3,11 @@
   "version": "1.0.0-beta",
   "description": "A ligntweight JavaScript utility library for EBLib or use Independently.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
     "build": "rollup --config rollup.config.js --bundleConfigAsCjs",
     "publish:private": "npm publish --registry https://i.enbrau.com:91/nexus/repository/npm-release/"
   },
@@ -21,6 +25,10 @@
   },
   "homepage": "https://github.com/enbrau/eblib-core#readme",
   "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
     "rollup": "^4.16.1"
   }
 }

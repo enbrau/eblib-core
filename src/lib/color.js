@@ -10,9 +10,9 @@ export function rgbToHex(rgb) {
     .replace('(', '')
     .replace(')', '')
     .split(',')
-    const h = parseInt(arr[0]).toString(16)
-    const e = parseInt(arr[1]).toString(16)
-    const x = parseInt(arr[2]).toString(16)
+    const h = parseInt(arr[0]).toString(16).padStart(2, '0')
+    const e = parseInt(arr[1]).toString(16).padStart(2, '0')
+    const x = parseInt(arr[2]).toString(16).padStart(2, '0')
     return `#${h}${e}${x}`
 }
 
@@ -28,5 +28,5 @@ export function hexToRgb(hex) {
   const r = parseInt('0x' + str.substring(0 * count, 1 * count)) ** power
   const g = parseInt('0x' + str.substring(1 * count, 2 * count)) ** power
   const b = parseInt('0x' + str.substring(2 * count)) ** power
-  return `rgb(${r}, ${g}, ${b})`
+  return `rgb(${r},${g},${b})`
 }

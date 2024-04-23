@@ -8,6 +8,5 @@
 export function toAmount(number, prefix, fixed) {
   let num = typeof number === 'string' ? parseFloat(number) : number
   num = num.toFixed(fixed || 2)
-  num = num.parseFloat(num)
-  return (prefix || '') + num.toLocaleString()
+  return (prefix || '') + num.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
