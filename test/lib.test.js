@@ -45,8 +45,8 @@ describe('R01: random.js', function() {
       expect(result.length).toBe(100)
     })
   })
-  describe('R01T01: $eblib.randomInteger', function() {
-    it("R01T0101: $eblib.randomInteger(4, 9)", function() {
+  describe('R01T02: $eblib.randomInteger', function() {
+    it("R01T0201: $eblib.randomInteger(4, 9)", function() {
       let result = $eblib.randomInteger(4, 9)
       expect(result >= 4).toBe(true)
       expect(result <= 9).toBe(true)
