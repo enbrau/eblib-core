@@ -69,7 +69,7 @@ describe('R01: random.js', function() {
   describe('R01T03: $eblib.random.randomColor', function() {
     it("R01T0301: $eblib.random.randomColor()", function() {
       let result = $eblib.random.randomColor()
-      expect($eblib.consts.REG_HEX_COLOR.test(result)).toBe(true)
+      expect($eblib.rules.REG_HEX_COLOR.test(result)).toBe(true)
     })
   })
 })
