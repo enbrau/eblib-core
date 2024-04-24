@@ -5,9 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage",
     "build": "rollup --config rollup.config.js --bundleConfigAsCjs",
     "publish:private": "npm publish --registry https://i.enbrau.com:91/nexus/repository/npm-release/"
   },
