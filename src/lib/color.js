@@ -34,11 +34,3 @@ export function hexToRgb(hex) {
   const b = parseInt('0x' + str.substring(2 * count)) ** power
   return `rgb(${r},${g},${b})`
 }
-
-/**
- * generate random color
- * @returns HEX format color string
- */
-export function randomColor() {
-  return `#${Math.random().toString(16).substring(2, 8).padEnd(6, '0')}`
-}
