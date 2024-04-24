@@ -32,6 +32,20 @@ describe('F01: format.js', function() {
       expect($eblib.format.toAmount(true)).toBe('')
     })
   })
+  describe('F01T02: $eblib.format.toFileSize', function() {
+    it("F01T0201: $eblib.format.toFileSize(1024)", function() {
+      expect($eblib.format.toFileSize(1024)).toBe('1.00KB')
+    })
+    it("F01T0202: $eblib.format.toFileSize(1024 * 1024)", function() {
+      expect($eblib.format.toFileSize(1024 * 1024)).toBe('1.00MB')
+    })
+    it("F01T0203: $eblib.format.toFileSize(1024 * 1024 * 1024)", function() {
+      expect($eblib.format.toFileSize(1024 * 1024 * 1024)).toBe('1.00GB')
+    })
+    it("F01T0203: $eblib.format.toFileSize(1024 * 1024 * 1024 * 1024)", function() {
+      expect($eblib.format.toFileSize(1024 * 1024 * 1024 * 1024)).toBe('>1TB')
+    })
+  })
 })
 
 describe('R01: random.js', function() {
