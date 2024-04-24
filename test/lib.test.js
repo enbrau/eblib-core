@@ -12,7 +12,7 @@ describe('C01: color.js', function() {
 })
 
 describe('F01: format.js', function() {
-  describe('F01T01: amount transform', function() {
+  describe('F01T01: $eblib.toAmount', function() {
     it("F01T0101: $eblib.toAmount('100000.567')", function() {
       expect($eblib.toAmount('100000.567')).toBe('100,000.57')
     })
@@ -35,7 +35,7 @@ describe('F01: format.js', function() {
 })
 
 describe('R01: random.js', function() {
-  describe('R01T01: $eblib.randomString()', function() {
+  describe('R01T01: $eblib.randomString', function() {
     it("R01T0101: $eblib.randomString()", function() {
       let result = $eblib.randomString()
       expect(result.length).toBe(8)
@@ -43,6 +43,13 @@ describe('R01: random.js', function() {
     it("R01T0102: $eblib.randomString(100)", function() {
       let result = $eblib.randomString(100)
       expect(result.length).toBe(100)
+    })
+  })
+  describe('R01T01: $eblib.randomInteger', function() {
+    it("R01T0101: $eblib.randomInteger(4, 9)", function() {
+      let result = $eblib.randomInteger(4, 9)
+      expect(result >= 4).toBe(true)
+      expect(result <= 9).toBe(true)
     })
   })
 })
