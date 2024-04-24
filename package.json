@@ -8,6 +8,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
     "build": "rollup --config rollup.config.js --bundleConfigAsCjs",
+    "build:doc": "jsdoc -r src -d doc",
     "publish:private": "npm publish --registry https://i.enbrau.com:91/nexus/repository/npm-release/"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "@babel/preset-env": "^7.24.4",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
+    "jsdoc": "^4.0.2",
     "rollup": "^4.16.1"
   }
 }
