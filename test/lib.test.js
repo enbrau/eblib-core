@@ -52,4 +52,10 @@ describe('R01: random.js', function() {
       expect(result <= 9).toBe(true)
     })
   })
+  describe('R01T03: $eblib.random.randomColor', function() {
+    it("R01T0301: $eblib.random.randomColor()", function() {
+      let result = $eblib.random.randomColor()
+      expect($eblib.consts.REG_HEX_COLOR.test(result)).toBe(true)
+    })
+  })
 })

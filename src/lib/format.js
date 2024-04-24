@@ -36,10 +36,3 @@ export function toFileSize(fileSizeByte) {
   return fileSizeMsg
 }
 
-/**
- * generate random color
- * @returns HEX format color string
- */
-export function randomColor() {
-  return `#${Math.random().toString(16).substring(2, 8).padEnd(6, '0')}`
-}

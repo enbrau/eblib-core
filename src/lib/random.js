@@ -23,3 +23,11 @@ export function randomString(length) {
 export function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
+/**
+ * generate random color
+ * @returns HEX format color string
+ */
+export function randomColor() {
+  return `#${Math.random().toString(16).substring(2, 8).padEnd(6, '0')}`
+}
