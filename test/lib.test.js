@@ -33,3 +33,16 @@ describe('F01: format.js', function() {
     })
   })
 })
+
+describe('R01: random.js', function() {
+  describe('R01T01: $eblib.randomString()', function() {
+    it("R01T0101: $eblib.randomString()", function() {
+      let result = $eblib.randomString()
+      expect(result.length).toBe(8)
+    })
+    it("R01T0102: $eblib.randomString(100)", function() {
+      let result = $eblib.randomString(100)
+      expect(result.length).toBe(100)
+    })
+  })
+})
