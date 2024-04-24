@@ -1,4 +1,8 @@
 /**
+ * @module color
+ */
+
+/**
  * convert color value from RGB format to HEX format
  * @param {String} rgb RGB format color string
  * @returns RGB format color string

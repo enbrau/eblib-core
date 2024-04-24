@@ -1,4 +1,8 @@
 /**
+ * @module random
+ */
+
+/**
  * generate random string
  * @param {number} length length of the random string
  * @returns random string

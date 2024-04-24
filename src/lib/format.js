@@ -1,4 +1,8 @@
 /**
+ * @module format
+ */
+
+/**
  * transform number into amount
  * @param {String|Number} number 
  * @param {String} prefix 
