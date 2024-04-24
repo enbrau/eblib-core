@@ -1,5 +1,5 @@
 /**
- * @module consts
+ * @module rules
  */
 
 /**
