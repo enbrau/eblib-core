@@ -30,3 +30,4 @@ coverage
 cypress/screenshots/*
 cypress/videos/*
 tmp
+doc
