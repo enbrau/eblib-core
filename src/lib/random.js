@@ -9,3 +9,13 @@ export function randomString(length) {
     Math.random().toString(36).substring(2, 2 + len).padEnd(len, '0') : 
     randomString(11) + randomString(len - 11)
 }
+
+/**
+ * generate random integer
+ * @param {Number} min the minimum integer
+ * @param {Number} max the maximum integer
+ * @return random integer
+ */
+export function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
