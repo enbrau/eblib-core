@@ -11,4 +11,3 @@ EBLib Core is a ligntweight JavaScript utility library for EBLib or use independ
 ```shell
 $ npm i -S @eblib/core
 ```
-
