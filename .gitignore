@@ -16,6 +16,7 @@ pnpm-debug.log*
 # Package Manager
 node_modules
 .pnpm-debug.log*
+package-lock.json
 
 # System
 .DS_Store
