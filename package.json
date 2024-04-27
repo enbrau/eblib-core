@@ -4,10 +4,14 @@
   "description": "A ligntweight JavaScript utility library for EBLib or use Independently.",
   "main": "index.js",
   "type": "module",
+  "files": [
+    "index.js",
+    "index.js.map"
+  ],
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
-    "build": "rollup --config rollup.config.js --bundleConfigAsCjs",
+    "build": "rollup --config rollup.config.js --bundleConfigAsCjs src/index.js",
     "build:doc": "jsdoc -r src -d doc",
     "publish:private": "npm publish --registry https://i.enbrau.com:91/nexus/repository/npm-release/"
   },

@@ -15,6 +15,12 @@ export default [
         sourcemap: true
       },
       {
+        dir: './',
+        format: 'esm',
+        entryFileNames: 'index.js',
+        sourcemap: true
+      },
+      {
         dir: 'dist',
         format: 'cjs',
         entryFileNames: 'index.cjs.js',
