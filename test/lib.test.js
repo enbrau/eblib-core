@@ -46,6 +46,46 @@ describe('F01: format.js', function() {
       expect($eblib.format.toFileSize(1024 * 1024 * 1024 * 1024)).toBe('>1TB')
     })
   })
+  describe('F01T03: $eblib.format.camelToSep', function() {
+    it("F01T0301: $eblib.format.camelToSep('SysUser')", function() {
+      expect($eblib.format.camelToSep('SysUser')).toBe('sys_user')
+    })
+    it("F01T0302: $eblib.format.camelToSep('sysUser')", function() {
+      expect($eblib.format.camelToSep('sysUser')).toBe('sys_user')
+    })
+    it("F01T0302: $eblib.format.camelToSep('sysUser', true)", function() {
+      expect($eblib.format.camelToSep('sysUser', true)).toBe('SYS_USER')
+    }),
+    it("F01T0302: $eblib.format.camelToSep('sysUser', true, '-')", function() {
+      expect($eblib.format.camelToSep('sysUser', true, '-')).toBe('SYS-USER')
+    })
+    it("F01T0302: $eblib.format.camelToSep('sysUser', false, ' ')", function() {
+      expect($eblib.format.camelToSep('sysUser', false, ' ')).toBe('sys user')
+    })
+  })
+  describe('F01T04: $eblib.format.toCamelCase', function() {
+    it("F01T0401: $eblib.format.toCamelCase('sys_user', true)", function() {
+      expect($eblib.format.toCamelCase('sys_user', true)).toBe('SysUser')
+    })
+    it("F01T0402: $eblib.format.toCamelCase('sys_user')", function() {
+      expect($eblib.format.toCamelCase('sys_user')).toBe('sysUser')
+    })
+    it("F01T0403: $eblib.format.toCamelCase('sys-user', true)", function() {
+      expect($eblib.format.toCamelCase('sys-user', true)).toBe('SysUser')
+    })
+    it("F01T0404: $eblib.format.toCamelCase('sys-user')", function() {
+      expect($eblib.format.toCamelCase('sys-user')).toBe('sysUser')
+    })
+    it("F01T0405: $eblib.format.toCamelCase('sys user', true)", function() {
+      expect($eblib.format.toCamelCase('sys user', true)).toBe('SysUser')
+    })
+    it("F01T0406: $eblib.format.toCamelCase('sys user')", function() {
+      expect($eblib.format.toCamelCase('sys user')).toBe('sysUser')
+    })
+    it("F01T0407: $eblib.format.toCamelCase('sys    user')", function() {
+      expect($eblib.format.toCamelCase('sys    user')).toBe('sysUser')
+    })
+  })
 })
 
 describe('R01: random.js', function() {
