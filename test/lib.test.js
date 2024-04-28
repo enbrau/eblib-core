@@ -1,13 +1,38 @@
 import $eblib from '../src/index.js'
 
 describe('C01: color.js', function() {
-  describe('C01T01: rgb and hex transform ', function() {
+  describe('C01T01: $eblib.color', function() {
     it("C01T0101: $eblib.color.rgbToHex('rgb(0,0,0)')", function() {
       expect($eblib.color.rgbToHex('rgb(0,0,0)')).toBe('#000000')
     })
     it("C01T0102: $eblib.color.hexToRgb('#000000')", function() {
       expect($eblib.color.hexToRgb('#000000')).toBe('rgb(0,0,0)')
     })
+  })
+})
+
+describe('C02: cookie.js', function() {
+  describe("C02T01: $eblib.cookie", function() {
+    it("C02T0101: $eblib.cookie.setCookie('token', 'TOKEN')", function() {
+      $eblib.cookie.setCookie('token', 'TOKEN')
+      expect($eblib.cookie.getCookie('token')).toBe('TOKEN')
+    })
+    it("C02T0102: $eblib.cookie.getCookie('token')", function() {
+      expect($eblib.cookie.getCookie('token')).toBe('TOKEN')
+    })
+    it("C02T0103: $eblib.cookie.removeCookie('token')", function() {
+      expect($eblib.cookie.getCookie('token')).toBe('TOKEN')
+      $eblib.cookie.removeCookie('token')
+      expect($eblib.cookie.getCookie('token')).toBe(undefined)
+    })
+    // it("C02T0104: $eblib.cookie.setCookie('token', 'TOKEN', { path: '/test' })", function() {
+    //   $eblib.cookie.setCookie('token', 'TOKEN', { path: '/test' })
+    //   expect($eblib.cookie.getCookie('token')).toBe(undefined)
+    //   global.window = { location: { pathname: '/test' } }
+    //   expect($eblib.cookie.getCookie('token')).toBe('TOKEN')
+    //   $eblib.cookie.removeCookie('token')
+    //   expect($eblib.cookie.getCookie('token')).toBe(undefined)
+    // })
   })
 })
 

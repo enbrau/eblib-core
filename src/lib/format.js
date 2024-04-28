@@ -5,8 +5,8 @@
 /**
  * transform number into amount
  * @param {String|Number} amount required, original amount string or number
- * @param {String}        prefix optional, prefix of the result
- * @param {Number}        fixed  optional, 
+ * @param {String}        prefix optional, default '', prefix of the result
+ * @param {Number}        fixed  optional, default 2, precision of the amout
  * @returns amount string
  */
 export function toAmount(amount, prefix, fixed) {
@@ -22,7 +22,7 @@ export function toAmount(amount, prefix, fixed) {
 
 /**
  * transform number into file size
- * @param {Number} bytes 
+ * @param {Number} bytes bytes number
  * @returns file size string
  */
 export function toFileSize(bytes) {
@@ -39,7 +39,7 @@ export function toFileSize(bytes) {
  * @param {String} str     required, camel style string
  * @param {Boolea} isUpper optional, default false, whether the result is upper case
  * @param {String} sep     optional, default '_', word seperator
- * @returns 
+ * @returns words seperated by seperator
  */
 export function camelToSep(str, isUpper, sep) {
   let seperator = sep || '_'
@@ -54,7 +54,7 @@ export function camelToSep(str, isUpper, sep) {
  * 
  * @param {String}  str     required, words seperated by '_', '-' or ' '
  * @param {Boolean} isUpper optional, default false, whether the result is upper camel case
- * @returns 
+ * @returns camel cased string
  */
 export function toCamelCase(str, isUpper) {
   let result = str.replace(/[-_\s]\w/ig, function(match){
